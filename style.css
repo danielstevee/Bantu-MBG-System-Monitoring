@@ -36,7 +36,9 @@
   -webkit-font-smoothing: antialiased;
 }
 
-menu, ol, ul {
+menu,
+ol,
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -108,15 +110,25 @@ img {
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.7; transform: scale(1.2); }
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.7;
+    transform: scale(1.2);
+  }
 }
 
 .problematika2,
 .solusi-terpadu,
 .transformasi-digital {
   color: var(--primary-blue);
-  font-size: 0.875rem; /* ~14px */
+  font-size: 0.875rem;
+  /* ~14px */
   font-weight: 700;
 }
 
@@ -130,7 +142,8 @@ img {
 .section-title {
   color: var(--primary-blue);
   text-align: center;
-  font-size: clamp(1.75rem, 3.6vw, 2.5rem); /* ~28px - 40px */
+  font-size: clamp(1.75rem, 3.6vw, 2.5rem);
+  /* ~28px - 40px */
   line-height: 1.25;
   font-weight: 900;
   margin-bottom: 16px;
@@ -139,7 +152,8 @@ img {
 .section-description {
   color: var(--text-dark);
   text-align: center;
-  font-size: 1rem; /* ~16px */
+  font-size: 1rem;
+  /* ~16px */
   line-height: 1.6;
   font-weight: 400;
   max-width: 680px;
@@ -168,7 +182,8 @@ img {
 .challenge-card::before {
   content: '';
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 4px;
   background: var(--gradient-blue-green);
@@ -201,7 +216,8 @@ img {
 .challenge-title {
   color: var(--primary-blue);
   text-align: left;
-  font-size: 1.0625rem; /* ~17px */
+  font-size: 1.0625rem;
+  /* ~17px */
   font-weight: 700;
   line-height: 1.4;
   margin-bottom: 10px;
@@ -210,7 +226,8 @@ img {
 .challenge-text {
   color: var(--text-dark);
   text-align: left;
-  font-size: 0.875rem; /* ~14px */
+  font-size: 0.875rem;
+  /* ~14px */
   line-height: 1.6;
   font-weight: 400;
 }
@@ -227,12 +244,10 @@ img {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: radial-gradient(
-      ellipse at 70% 30%,
+  background: radial-gradient(ellipse at 70% 30%,
       rgba(16, 183, 131, 0.08) 0%,
       rgba(165, 208, 218, 0.16) 42%,
-      rgba(253, 249, 241, 0.2) 80%
-    ),
+      rgba(253, 249, 241, 0.2) 80%),
     linear-gradient(to bottom, #fdf9f1, #ffffff);
 }
 
@@ -275,7 +290,7 @@ img {
   direction: rtl;
 }
 
-.feature-row.reverse > * {
+.feature-row.reverse>* {
   direction: ltr;
 }
 
@@ -302,7 +317,8 @@ img {
 .feature-title {
   color: var(--primary-blue);
   text-align: left;
-  font-size: clamp(1.375rem, 2.2vw, 1.625rem); /* ~22px - 26px */
+  font-size: clamp(1.375rem, 2.2vw, 1.625rem);
+  /* ~22px - 26px */
   line-height: 1.3;
   font-weight: 600;
   margin-bottom: 14px;
@@ -311,7 +327,8 @@ img {
 .feature-text {
   color: var(--text-dark);
   text-align: left;
-  font-size: 0.9375rem; /* ~15px */
+  font-size: 0.9375rem;
+  /* ~15px */
   line-height: 1.7;
   font-weight: 400;
 }
@@ -387,7 +404,8 @@ img {
 .platform-card::before {
   content: '';
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 4px;
   background: var(--gradient-blue-green);
@@ -438,7 +456,7 @@ img {
 ============================================ */
 .assessment-section {
   position: relative;
-  padding: 20px 12px 130px  !important;
+  padding: 20px 12px 130px !important;
 }
 
 .assessment-badge-wrapper {
@@ -452,18 +470,17 @@ img {
   grid-template-columns: 1fr 1.2fr;
   gap: 40px;
   align-items: center;
-  max-width: 1050px; /* sebelumnya terlalu lebar */
+  max-width: 1050px;
+  /* sebelumnya terlalu lebar */
   margin: 0 auto;
   padding: 0;
 }
 
 /* LEFT CARD */
 .score-card {
-  background: linear-gradient(
-    135deg,
-    rgba(21, 177, 140, 0.07),
-    rgba(165, 208, 218, 0.14)
-  );
+  background: linear-gradient(135deg,
+      rgba(21, 177, 140, 0.07),
+      rgba(165, 208, 218, 0.14));
   border-radius: 22px;
   padding: 34px 26px;
   text-align: center;
@@ -615,6 +632,7 @@ img {
   transform: translateY(-2px);
   box-shadow: var(--shadow-hover);
 }
+
 .assessment-item {
   display: flex;
   align-items: center;
@@ -680,51 +698,80 @@ img {
   }
 }
 
-/* ============================================
-   SECTION 7: FOOTER
-   ============================================ */
 .footer {
   background: var(--primary-blue);
-  padding: 64px 20px;
+  padding: 70px 40px;
   position: relative;
 }
 
 .footer-content {
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: 0 20px;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 40px;
-  align-items: center;
+  padding: 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 26px;
 }
 
+/* Logo + text sejajar */
 .footer-brand {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 18px;
 }
 
+/* ukuran logo */
 .untitled-1-12 {
-  width: 48px;
-  height: 48px;
+  width: 80px;
+  height: auto;
   object-fit: contain;
 }
 
+/* Brand text BESAR & putih */
 .bantu-mbg2 {
   color: var(--white);
-  font-size: 1.375rem; /* ~22px */
+  font-size: 2rem;
   font-weight: 700;
+  line-height: 1;
   white-space: nowrap;
 }
 
+/* Description */
 .footer-description {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.92);
   text-align: left;
-  font-size: 0.9375rem;
-  line-height: 1.65;
+  font-size: 1.05rem;
+  line-height: 1.7;
   font-weight: 400;
-  max-width: 480px;
+  max-width: 560px;
+}
+
+
+
+
+/* Mobile */
+@media (max-width: 768px) {
+  .footer {
+    padding: 50px 24px;
+  }
+
+  .footer-brand {
+    gap: 14px;
+  }
+
+  .untitled-1-12 {
+    width: 65px;
+  }
+
+  .bantu-mbg2 {
+    font-size: 1.5rem;
+  }
+
+  .footer-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
 }
 
 /* ============================================
@@ -735,35 +782,68 @@ img {
   transform: translateY(30px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
-.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 .slide-left {
   opacity: 0;
   transform: translateX(-50px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
-.slide-left.visible { opacity: 1; transform: translateX(0); }
+
+.slide-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
 
 .slide-right {
   opacity: 0;
   transform: translateX(50px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
-.slide-right.visible { opacity: 1; transform: translateX(0); }
+
+.slide-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
 
 .scale-in {
   opacity: 0;
   transform: scale(0.8);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
-.scale-in.visible { opacity: 1; transform: scale(1); }
 
-.stagger-1 { transition-delay: 0.1s; }
-.stagger-2 { transition-delay: 0.2s; }
-.stagger-3 { transition-delay: 0.3s; }
-.stagger-4 { transition-delay: 0.4s; }
-.stagger-5 { transition-delay: 0.5s; }
-.stagger-6 { transition-delay: 0.6s; }
+.scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.stagger-1 {
+  transition-delay: 0.1s;
+}
+
+.stagger-2 {
+  transition-delay: 0.2s;
+}
+
+.stagger-3 {
+  transition-delay: 0.3s;
+}
+
+.stagger-4 {
+  transition-delay: 0.4s;
+}
+
+.stagger-5 {
+  transition-delay: 0.5s;
+}
+
+.stagger-6 {
+  transition-delay: 0.6s;
+}
 
 section[id] {
   scroll-margin-top: 100px;
@@ -773,6 +853,7 @@ section[id] {
    RESPONSIVE ADJUSTMENTS
    ============================================ */
 @media (max-width: 1024px) {
+
   .challenges-grid,
   .platform-grid {
     grid-template-columns: repeat(2, 1fr);
