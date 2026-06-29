@@ -7,12 +7,12 @@
 
 | Section | Preview |
 |---------|---------|
-| **Page Home** | [![alt text](image.png)] |
-| **Page Problematika** | [![alt text](image-1.png)] |
-| **Page Solusi** | [![alt text](image-2.png)] |
-| **Platform Ekosistem** | [![alt text](image-4.png)] |
-| **Penilaian / Assessment** | [![alt text](image-5.png)] |
-| **Footer** | [![alt text](image-6.png)] |
+| **Page Home** | ![alt text](image.png) |
+| **Page Problematika** | ![alt text](image-1.png) |
+| **Page Solusi** | ![alt text](image-2.png) |
+| **Platform Ekosistem** | ![alt text](image-4.png) |
+| **Penilaian / Assessment** | ![alt text](image-5.png) |
+| **Footer** | ![alt text](image-6.png) |
 
 ---
 
