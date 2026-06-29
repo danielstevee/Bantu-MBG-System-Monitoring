@@ -232,6 +232,11 @@ img {
   font-weight: 400;
 }
 
+.challenge-title.kusus {
+    letter-spacing: -0.5px;
+    padding-top: 15px;
+    font-size: 25px;
+}
 /* ============================================
    SECTION 4: SOLUSI / SOLUTIONS & FEATURES
    ============================================ */
