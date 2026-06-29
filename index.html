@@ -4,304 +4,497 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./vars.css">
-  <link rel="stylesheet" href="./style.css">
-  
-  
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+  <title>Bantu MBG - Monitoring Program Makan Bergizi Gratis</title>
+  <meta name="description" content="Platform digital monitoring terpadu untuk Program Makan Bergizi Gratis nasional">
+  <base target="_blank">
+
+  <!-- Tailwind CSS CDN (khusus dipakai di Navbar & Hero) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            'bantu-navy': '#172554',
+            'bantu-blue': '#004d91',
+            'bantu-teal': '#15b18c',
+            'bantu-dark': '#5e5e5e',
+            'bantu-cream': '#fdf9f1',
+            'bantu-gray': '#efefef',
+          },
+        }
+      }
+    }
+  </script>
   <style>
-   a,
-   button,
-   input,
-   select,
-   h1,
-   h2,
-   h3,
-   h4,
-   h5,
-   * {
-       box-sizing: border-box;
-       margin: 0;
-       padding: 0;
-       border: none;
-       text-decoration: none;
-       background: none;
-   
-       -webkit-font-smoothing: antialiased;
-   }
-   
-   menu, ol, ul {
-       list-style-type: none;
-       margin: 0;
-       padding: 0;
-   }
-   </style>
-  <title>Document</title>
+    /* Custom gradient text */
+    .gradient-text {
+      background: linear-gradient(90deg, #467bea 0%, #10b782 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar glass effect on scroll */
+    .navbar-scrolled {
+      background: rgba(255, 255, 255, 0.95) !important;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+  </style>
+
+  <!-- Stylesheet untuk Section Tantangan, Solusi, Platform, Penilaian & Footer -->
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="font-poppins bg-white text-bantu-dark overflow-x-hidden">
+
   <div class="frame-4">
-    <div class="bg"></div>
-    <div
-      class="platform-digital-monitoring-terpadu-yang-dirancang-khusus-untuk-mengelola-menilai-dan-mengevaluasi-pelaksanaan-program-makan-bergizi-gratis-secara-nasional"
-    >
-      Platform digital monitoring terpadu yang dirancang khusus untuk mengelola,
-      menilai, dan mengevaluasi pelaksanaan Program Makan Bergizi Gratis secara
-      nasional.
-    </div>
-    <div
-      class="sistem-pengawasan-real-time-yang-memastikan-setiap-tahapan-operasional-berjalan-sesuai-standar-prosedur-sop"
-    >
-      sistem pengawasan real-time yang memastikan setiap tahapan operasional
-      berjalan sesuai standar prosedur (SOP).
-    </div>
-    <div
-      class="tanpa-perhitungan-yang-tepat-dapur-berisiko-mengalami-kelebihan-atau-kekurangan-bahan-baku-hal-ini-dapat-membuat-biaya-tidak-efisien-sistem-kami-menghitung-gramasi-secara-otomatis"
-    >
-      Tanpa perhitungan yang tepat, dapur berisiko mengalami kelebihan atau
-      kekurangan bahan baku. Hal ini dapat membuat biaya tidak efisien. Sistem
-      kami menghitung gramasi secara otomatis
-    </div>
-    <div
-      class="menyusun-variasi-menu-harian-dengan-mudah-jadwal-otomatis-disesuaikan-dengan-kebutuhan-kandungan-nutrisi-standar-yang-diperlukan-oleh-anak"
-    >
-      Menyusun variasi menu harian dengan mudah. Jadwal otomatis disesuaikan
-      dengan kebutuhan kandungan nutrisi standar yang diperlukan oleh anak.
-    </div>
-    <div
-      class="laporan-operasional-otomatis-mempermudah-proses-verifikasi-efisien-waktu-dan-data-lebih-akurat-proses-dari-persiapan-hingga-selesai-dapat-dipantau-secara-realtime-dan-dipastikan-sesuai-tujuan"
-    >
-      Laporan operasional otomatis mempermudah proses verifikasi, efisien waktu,
-      dan data lebih akurat.
-      <br />
-      <br />
-      Proses dari persiapan hingga selesai dapat dipantau secara realtime dan
-      dipastikan sesuai tujuan.
-    </div>
-    <div class="monitoring-proses">Monitoring Proses</div>
-    <div class="apa-itu-bantu-mbg">Apa itu Bantu MBG?</div>
-    <div class="perencanaan-belanja-bahan-baku">
-      Perencanaan Belanja Bahan Baku
-    </div>
-    <div class="perencanaan-menu-siklus-menu">
-      Perencanaan Menu &amp; Siklus Menu
-    </div>
-    <div class="laporan-digital-monitoring-proses">
-      Laporan Digital &amp; Monitoring Proses
-    </div>
-    <div class="group-4">
-      <div class="rectangle-7"></div>
-      <div class="group-1">
-        <div class="solusi-terpadu">Solusi Terpadu</div>
-        <div class="ellipse-1"></div>
+
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-5 lg:px-6 py-3 transition-all duration-300">
+  <nav class="mx-auto max-w-[1220px]">
+
+    <div class="flex items-center justify-between bg-bantu-gray rounded-[32px] px-5 py-2.5 shadow-sm">
+
+      <!-- Logo -->
+      <a href="#home" class="flex items-center gap-2.5 shrink-0">
+        <img 
+          src="untitled-1-10.png" 
+          alt="Bantu MBG Logo" 
+          class="h-10 w-auto object-contain"
+        />
+        <span class="text-xl font-bold leading-none">
+          <span class="text-black">Bantu</span>
+          <span class="text-bantu-blue">MBG</span>
+        </span>
+      </a>
+
+      <!-- Center Nav -->
+      <div class="hidden lg:flex items-center gap-1">
+        <a href="#tantangan" class="px-4 py-1.5 text-[15px] font-medium text-gray-500 hover:text-black transition-colors">
+          Tantangan
+        </a>
+        <a href="#fitur" class="px-4 py-1.5 text-[15px] font-medium text-gray-500 hover:text-black transition-colors">
+          Fitur
+        </a>
+        <a href="#solusi" class="px-4 py-1.5 text-[15px] font-medium text-gray-500 hover:text-black transition-colors">
+          Solusi
+        </a>
+        <a href="#manfaat" class="px-4 py-1.5 text-[15px] font-medium text-gray-500 hover:text-black transition-colors">
+          Manfaat
+        </a>
       </div>
-    </div>
-    <img class="image-15" src="image-150.png" />
-    <img class="image-17" src="image-170.png" />
-    <img class="image-16" src="image-160.png" />
-    <img class="image-18" src="image-180.png" />
-    <div
-      class="yayasan-dan-dapur-masih-menghadapi-sejumlah-tantangan-dalam-menjalankan-program-mbg-yang-dirancang-untuk-menjamin-asupan-makanan-sehat-dan-tepat-waktu-bagi-siswa"
-    >
-      Yayasan dan dapur masih menghadapi sejumlah tantangan dalam menjalankan
-      Program MBG, yang dirancang untuk menjamin asupan makanan sehat dan tepat
-      waktu bagi siswa.
-    </div>
-    <div class="tantangan-program-gizi">Tantangan Program Gizi</div>
-    <div class="group-3">
-      <div class="rectangle-72"></div>
-      <div class="group-12">
-        <div class="problematika2">Problematika</div>
-        <div class="ellipse-12"></div>
+
+      <!-- Right Side -->
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="#hubungi" class="text-[15px] font-bold text-black hover:text-bantu-blue transition-colors">
+          Hubungi Kami
+        </a>
+
+        <a 
+          href="#daftar" 
+          class="inline-flex items-center px-7 py-2.5 text-[15px] font-bold text-white rounded-full transition-all duration-300 hover:shadow-md"
+          style="background: linear-gradient(90deg, #004d91 0%, #15b18c 100%);"
+        >
+          Daftar Mitra
+        </a>
       </div>
+
+      <!-- Mobile -->
+      <button 
+        id="mobile-menu-btn" 
+        class="lg:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-200 transition-colors"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
     </div>
-    <div class="problematika2">Problematika</div>
-    <div class="rectangle-28"></div>
-    <div class="rectangle-37"></div>
-    <div class="rectangle-29"></div>
-    <div class="rectangle-38"></div>
-    <div class="rectangle-30"></div>
-    <div class="rectangle-39"></div>
-    <div class="rectangle-34"></div>
-    <div class="rectangle-40"></div>
-    <div class="rectangle-35"></div>
-    <div class="rectangle-41"></div>
-    <div class="rectangle-36"></div>
-    <img class="mask-group" src="mask-group0.svg" />
-    <img class="mask-group2" src="mask-group1.svg" />
-    <img class="mask-group3" src="mask-group2.svg" />
-    <img class="mask-group4" src="mask-group3.svg" />
-    <img class="mask-group5" src="mask-group4.svg" />
-    <div class="perencanaan-belanja">Perencanaan Belanja</div>
-    <div class="pemenuhan-gizi">Pemenuhan Gizi</div>
-    <div class="pencatatan-manual">Pencatatan Manual</div>
-    <div class="deteksi-lambat">Deteksi Lambat</div>
-    <div class="distribusi">Distribusi</div>
-    <div
-      class="tanpa-sistem-yang-kuat-program-besar-akan-sulit-diukur-keberhasilannya-secara-akurat"
-    >
-      Tanpa sistem yang kuat, program besar akan sulit diukur keberhasilannya
-      secara akurat.
-    </div>
-    <div
-      class="tanpa-sistem-yang-jelas-kebutuhan-bahan-baku-sulit-diprediksi-berisiko-menimbulkan-kekurangan-atau-kelebihan-stok"
-    >
-      Tanpa sistem yang jelas, kebutuhan bahan baku sulit diprediksi, berisiko
-      menimbulkan kekurangan atau kelebihan stok.
-    </div>
-    <div
-      class="tanpa-sistem-yang-jelas-ketidaksesuaian-porsi-sasaran-sulit-terdeteksi-secara-dini"
-    >
-      Tanpa sistem yang jelas, Ketidaksesuaian porsi/sasaran sulit terdeteksi
-      secara dini.
-    </div>
-    <div
-      class="tanpa-sistem-yang-jelas-kebutuhan-bahan-baku-sulit-diprediksi-berisiko-menimbulkan-kekurangan-atau-kelebihan-stok2"
-    >
-      Tanpa sistem yang jelas, kebutuhan bahan baku sulit diprediksi, berisiko
-      menimbulkan kekurangan atau kelebihan stok.
-    </div>
-    <div
-      class="tanpa-sistem-yang-jelas-kebutuhan-bahan-baku-sulit-diprediksi-berisiko-menimbulkan-kekurangan-atau-kelebihan-stok3"
-    >
-      Tanpa sistem yang jelas, kebutuhan bahan baku sulit diprediksi, berisiko
-      menimbulkan kekurangan atau kelebihan stok.
-    </div>
-    <div
-      class="tanpa-sistem-yang-jelas-kebutuhan-bahan-baku-sulit-diprediksi-berisiko-menimbulkan-kekurangan-atau-kelebihan-stok4"
-    >
-      Tanpa sistem yang jelas, kebutuhan bahan baku sulit diprediksi, berisiko
-      menimbulkan kekurangan atau kelebihan stok.
-    </div>
-    <div class="bg2"></div>
-    <div class="subs">
-      <div class="rectangle-73"></div>
-      <div class="berlangganan-sekarang">Berlangganan Sekarang</div>
-    </div>
-    <div
-      class="mewujudkan-program-makan-bergizi-gratis-nasional-yang-tidak-hanya-berjalan-tetapi-terpantau-terukur-dan-berdampak-nyata-hingga-ke-setiap-penerima-manfaat"
-    >
-      Mewujudkan program Makan Bergizi Gratis nasional yang tidak hanya berjalan,
-      tetapi terpantau, terukur, dan berdampak nyata hingga ke setiap penerima
-      manfaat.
-    </div>
-    <div class="headline">
-      <div class="monitoring-mbg-yang">Monitoring MBG yang</div>
-      <div class="dalam-satu-system">Dalam Satu System</div>
-      <div class="transparan-terukur">Transparan &amp; Terukur</div>
-    </div>
-    <div class="group-2">
-      <div class="rectangle-74"></div>
-      <div class="group-12">
-        <div class="pantau-evaluasi-tingkatkan">Pantau. Evaluasi. Tingkatkan</div>
-        <div class="ellipse-13"></div>
+  </nav>
+</header>
+
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+
+      <!-- Background gradient -->
+      <div class="absolute inset-0 -z-10" style="background: radial-gradient(ellipse at 30% 20%, rgba(16, 183, 131, 0.08) 0%, rgba(165, 208, 218, 0.15) 40%, rgba(253, 249, 241, 0.3) 70%), linear-gradient(to bottom right, #fdf9f1, #ffffff);">
       </div>
-    </div>
-    <div class="rectangle-5"></div>
-    <div class="rectangle-75"></div>
-    <div class="tantangan">Tantangan</div>
-    <div class="bantu-mbg">
-      <span>
-        <span class="bantu-mbg-span">Bantu</span>
-        <span class="bantu-mbg-span2">MBG</span>
-      </span>
-    </div>
-    <div class="fitur">Fitur</div>
-    <div class="solusi2">Solusi</div>
-    <div class="manfaat">Manfaat</div>
-    <div class="hubungi-kami">Hubungi Kami</div>
-    <div class="daftar-mitra">Daftar Mitra</div>
-    <img class="mask-group6" src="mask-group5.svg" />
-    <img class="untitled-1-1" src="untitled-1-10.png" />
-    <div class="rectangle-48"></div>
-    <img class="mask-group7" src="mask-group6.svg" />
-    <div class="rectangle-76"></div>
-    <div class="group-13">
-      <div class="pass">PASS</div>
-    </div>
-    <div class="rectangle-77"></div>
-    <div class="group-13">
-      <div class="fail">FAIL</div>
-    </div>
-    <div class="rectangle-78"></div>
-    <div class="group-14">
-      <div class="partial">PARTIAL</div>
-    </div>
-    <div class="ellipse-2"></div>
-    <div class="rectangle-282"></div>
-    <div class="rectangle-292"></div>
-    <div class="rectangle-302"></div>
-    <div class="rectangle-342"></div>
-    <div class="rectangle-352"></div>
-    <div class="rectangle-362"></div>
-    <img class="mask-group8" src="mask-group7.svg" />
-    <img class="mask-group9" src="mask-group8.svg" />
-    <div class="yayasan-sppg">Yayasan SPPG</div>
-    <div class="dapur-mitra">Dapur Mitra</div>
-    <div class="pihak-sekolah">Pihak Sekolah</div>
-    <div
-      class="atur-menu-bahan-baku-belanja-hingga-distribusi-lewat-laporan-otomatis"
-    >
-      Atur menu, bahan baku, belanja, hingga distribusi lewat laporan otomatis.
-    </div>
-    <div
-      class="pantau-menu-harian-pastikan-distribusi-tepat-sasaran-dan-evaluasi-kualitas-makanan"
-    >
-      Pantau menu harian, pastikan distribusi tepat sasaran, dan evaluasi kualitas
-      makanan.
-    </div>
-    <div
-      class="hasil-akhir-berupa-skor-haccp-untuk-setiap-fasilitas-dapur-atau-wilayah-diukur-berdasarkan-sistem-jaminan-keamanan-pangan-yang-bertujuan-untuk-mengidentifikasi-mengevaluasi-dan-mengendalikan-bahaya-secara-sistematis"
-    >
-      Hasil akhir berupa &quot;Skor HACCP&quot; untuk setiap fasilitas dapur atau
-      wilayah, diukur berdasarkan sistem jaminan keamanan pangan yang bertujuan
-      untuk mengidentifikasi, mengevaluasi, dan mengendalikan bahaya secara
-      sistematis.
-    </div>
-    <div class="kualitas-gizi-makanan-harian">Kualitas gizi makanan harian</div>
-    <div class="ketepatan-waktu-operasional-distribusi">
-      Ketepatan waktu operasional distribusi
-    </div>
-    <div class="kesesuaian-menu-dengan-sop-dapur">
-      Kesesuaian menu dengan SOP dapur
-    </div>
-    <div class="tingkat-keterjangkauan-titik-wilayah">
-      Tingkat keterjangkauan titik wilayah
-    </div>
-    <div class="kendali-penuh-yayasan-dengan-laporan-dan-rencana-biaya-akurat">
-      Kendali penuh yayasan dengan laporan dan rencana biaya akurat.
-    </div>
-    <img class="mask-group10" src="mask-group9.svg" />
-    <div
-      class="sistem-yang-saling-terhubung-memberikan-kendali-penuh-kepada-tiap-pemangku-kepentingan-untuk-memastikan-program-berjalan-lancar-dan-akuntabel"
-    >
-      Sistem yang saling terhubung memberikan kendali penuh kepada tiap pemangku
-      kepentingan untuk memastikan program berjalan lancar dan akuntabel.
-    </div>
-    <div class="platform-satu-pintu-untuk-seluruh-ekosistem">
-      Platform Satu Pintu
-      <br />
-      Untuk Seluruh Ekosistem.
-    </div>
-    <div class="penilaian-berbasis-standar-keamanan-pangan">
-      Penilaian Berbasis Standar Keamanan Pangan
-    </div>
-    <div class="rectangle-79"></div>
-    <div class="group-15">
-      <div class="transformasi-digital">Transformasi Digital</div>
-      <div class="ellipse-14"></div>
-    </div>
-    <div class="_100">100</div>
-    <div class="sangat-baik">Sangat Baik</div>
-    <div class="keamanan-pangan-minggu-ini">Keamanan pangan minggu ini</div>
-    <div class="rectangle-50"></div>
-    <div class="bantu-mbg2">Bantu MBG</div>
-    <img class="untitled-1-12" src="untitled-1-11.png" />
-    <div
-      class="sistem-monitoring-program-makan-bergizi-gratis-terpadu-untuk-memastikan-pelaksanaan-nasional-yang-efektif-dan-transparan"
-    >
-      Sistem Monitoring Program Makan Bergizi Gratis terpadu untuk memastikan
-      pelaksanaan nasional yang efektif dan transparan.
-    </div>
-  </div>
-  
+
+      <div class="max-w-4xl mx-auto text-center">
+
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 bg-white border border-bantu-blue/30 rounded-full px-5 py-2.5 mb-8 shadow-sm hover:shadow-md transition-shadow duration-300">
+          <span class="w-2.5 h-2.5 bg-bantu-teal rounded-full animate-pulse"></span>
+          <span class="text-sm font-bold text-bantu-navy">Pantau. Evaluasi. Tingkatkan</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="mb-6">
+          <span class="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-bantu-navy leading-tight">
+            Monitoring MBG yang
+          </span>
+          <span class="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight gradient-text mt-1">
+            Transparan & Terukur
+          </span>
+          <span class="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-bantu-navy leading-tight mt-1">
+            Dalam Satu System
+          </span>
+        </h1>
+
+        <!-- Description -->
+        <p class="text-base sm:text-lg text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">
+          Mewujudkan program Makan Bergizi Gratis nasional yang tidak hanya berjalan,
+          tetapi terpantau, terukur, dan berdampak nyata hingga ke setiap penerima manfaat.
+        </p>
+
+        <!-- CTA Button -->
+        <a
+          href="#subs"
+          class="inline-flex items-center justify-center px-8 py-3.5 text-base font-bold text-white rounded-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:scale-105"
+          style="background: linear-gradient(135deg, #004d91 0%, #15b18c 100%);"
+        >
+          Berlangganan Sekarang
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 3: PROBLEMATIKA / CHALLENGES
+         ============================================ -->
+    <section class="problematika-section" id="tantangan">
+      <div style="text-align: center;">
+        <!-- Badge -->
+        <div class="section-badge fade-in">
+          <span class="badge-dot"></span>
+          <span class="problematika2">Problematika</span>
+        </div>
+
+        <!-- Title -->
+        <h2 class="section-title fade-in stagger-1">Tantangan Program Gizi</h2>
+
+        <!-- Description -->
+        <p class="section-description fade-in stagger-2">
+          Yayasan dan dapur masih menghadapi sejumlah tantangan dalam menjalankan
+          Program MBG, yang dirancang untuk menjamin asupan makanan sehat dan tepat
+          waktu bagi siswa.
+        </p>
+      </div>
+
+      <!-- Challenges Grid -->
+      <div class="challenges-grid">
+        <!-- Card 1: Perencanaan Belanja -->
+        <div class="challenge-card fade-in stagger-1">
+          <img class="challenge-icon mask-group3" src="mask-group2.svg" alt="Perencanaan Belanja" />
+          <h3 class="challenge-title">Perencanaan Belanja</h3>
+          <p class="challenge-text">
+            Tanpa sistem yang jelas, kebutuhan bahan baku sulit diprediksi, berisiko
+            menimbulkan kekurangan atau kelebihan stok.
+          </p>
+        </div>
+
+        <!-- Card 2: Pencatatan Manual -->
+        <div class="challenge-card fade-in stagger-2">
+          <img class="challenge-icon mask-group5" src="mask-group3.svg" alt="Pencatatan Manual" />
+          <h3 class="challenge-title">Pencatatan Manual</h3>
+          <p class="challenge-text">
+            Tanpa sistem yang jelas, kebutuhan bahan baku sulit diprediksi, berisiko
+            menimbulkan kekurangan atau kelebihan stok.
+          </p>
+        </div>
+
+        <!-- Card 3: Distribusi -->
+        <div class="challenge-card fade-in stagger-3">
+          <img class="challenge-icon mask-group4" src="mask-group4.svg" alt="Distribusi" />
+          <h3 class="challenge-title">Distribusi</h3>
+          <p class="challenge-text">
+            Tanpa sistem yang jelas, kebutuhan bahan baku sulit diprediksi, berisiko
+            menimbulkan kekurangan atau kelebihan stok.
+          </p>
+        </div>
+
+        <!-- Card 4: Pemenuhan Gizi -->
+        <div class="challenge-card fade-in stagger-4">
+          <img class="challenge-icon mask-group2" src="mask-group1.svg" alt="Pemenuhan Gizi" />
+          <h3 class="challenge-title">Pemenuhan Gizi</h3>
+          <p class="challenge-text">
+            Tanpa sistem yang jelas, kebutuhan bahan baku sulit diprediksi, berisiko
+            menimbulkan kekurangan atau kelebihan stok.
+          </p>
+        </div>
+
+        <!-- Card 5: Deteksi Lambat -->
+        <div class="challenge-card fade-in stagger-5">
+          <img class="challenge-icon mask-group" src="mask-group0.svg" alt="Deteksi Lambat" />
+          <h3 class="challenge-title">Deteksi Lambat</h3>
+          <p class="challenge-text">
+            Tanpa sistem yang jelas, Ketidaksesuaian porsi/sasaran sulit terdeteksi
+            secara dini.
+          </p>
+        </div>
+
+        <!-- Card 6: Tanpa Sistem Kuat -->
+        <div class="challenge-card fade-in stagger-6">
+          <img class="challenge-icon" src="mask-group0.svg" alt="Tanpa Sistem" />
+          <h3 class="challenge-title">Tanpa sistem yang kuat, program besar akan sulit diukur keberhasilannya secara akurat.</h3>
+          <p class="challenge-text">
+            Tanpa sistem yang jelas, kebutuhan bahan baku sulit diprediksi, berisiko
+            menimbulkan kekurangan atau kelebihan stok.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 4: SOLUSI / SOLUTIONS & FEATURES
+         ============================================ -->
+    <section class="solusi-section" id="solusi">
+      <div class="solusi-bg"></div>
+
+      <div style="text-align: center;">
+        <!-- Badge -->
+        <div class="solusi-badge fade-in">
+          <span class="badge-dot"></span>
+          <span class="solusi-terpadu">Solusi Terpadu</span>
+        </div>
+
+        <!-- Title -->
+        <h2 class="solusi-title fade-in stagger-1">Apa itu Bantu MBG?</h2>
+
+        <!-- Description -->
+        <p class="solusi-description fade-in stagger-2">
+          Platform digital monitoring terpadu yang dirancang khusus untuk mengelola,
+          menilai, dan mengevaluasi pelaksanaan Program Makan Bergizi Gratis secara
+          nasional.
+        </p>
+      </div>
+
+      <!-- Features Grid -->
+      <div class="features-grid" id="fitur">
+        <!-- Feature 1: Monitoring Proses -->
+        <div class="feature-row fade-in">
+          <div class="feature-content slide-left">
+            <h3 class="feature-title">Monitoring Proses</h3>
+            <p class="feature-text">
+              sistem pengawasan real-time yang memastikan setiap tahapan operasional
+              berjalan sesuai standar prosedur (SOP).
+            </p>
+          </div>
+          <img class="feature-image image-15" src="image-150.png" alt="Monitoring Proses" />
+        </div>
+
+        <!-- Feature 2: Perencanaan Menu & Siklus Menu -->
+        <div class="feature-row reverse fade-in">
+          <div class="feature-content slide-right">
+            <h3 class="feature-title">Perencanaan Menu & Siklus Menu</h3>
+            <p class="feature-text">
+              Menyusun variasi menu harian dengan mudah. Jadwal otomatis disesuaikan
+              dengan kebutuhan kandungan nutrisi standar yang diperlukan oleh anak.
+            </p>
+          </div>
+          <img class="feature-image image-16" src="image-160.png" alt="Perencanaan Menu" />
+        </div>
+
+        <!-- Feature 3: Perencanaan Belanja Bahan Baku -->
+        <div class="feature-row fade-in">
+          <div class="feature-content slide-left">
+            <h3 class="feature-title">Perencanaan Belanja Bahan Baku</h3>
+            <p class="feature-text">
+              Tanpa perhitungan yang tepat, dapur berisiko mengalami kelebihan atau
+              kekurangan bahan baku. Hal ini dapat membuat biaya tidak efisien. Sistem
+              kami menghitung gramasi secara otomatis.
+            </p>
+          </div>
+          <img class="feature-image image-17" src="image-170.png" alt="Perencanaan Belanja" />
+        </div>
+
+        <!-- Feature 4: Laporan Digital & Monitoring Proses -->
+        <div class="feature-row reverse fade-in">
+          <div class="feature-content slide-right">
+            <h3 class="feature-title">Laporan Digital & Monitoring Proses</h3>
+            <p class="feature-text">
+              Laporan operasional otomatis mempermudah proses verifikasi, efisien waktu,
+              dan data lebih akurat.
+              <br /><br />
+              Proses dari persiapan hingga selesai dapat dipantau secara realtime dan
+              dipastikan sesuai tujuan.
+            </p>
+          </div>
+          <img class="feature-image image-18" src="image-180.png" alt="Laporan Digital" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 5: PLATFORM / ECOSYSTEM
+         ============================================ -->
+    <section class="platform-section" id="manfaat">
+      <div style="text-align: center; margin-bottom: 60px;">
+        <!-- Badge -->
+        <div class="section-badge fade-in">
+          <span class="badge-dot"></span>
+          <span class="transformasi-digital">Transformasi Digital</span>
+        </div>
+      </div>
+
+      <!-- Platform Header -->
+      <div class="platform-header">
+        <h2 class="platform-title fade-in slide-left">
+          Platform Satu Pintu<br />
+          Untuk Seluruh Ekosistem.
+        </h2>
+        <p class="platform-description fade-in slide-right">
+          Sistem yang saling terhubung memberikan kendali penuh kepada tiap pemangku
+          kepentingan untuk memastikan program berjalan lancar dan akuntabel.
+        </p>
+      </div>
+
+      <!-- Platform Cards -->
+      <div class="platform-grid">
+        <!-- Card 1: Yayasan SPPG -->
+        <div class="platform-card fade-in stagger-1">
+          <img class="platform-icon mask-group10" src="mask-group9.svg" alt="Yayasan SPPG" />
+          <h3 class="platform-card-title">Yayasan SPPG</h3>
+          <p class="platform-card-text">
+            Kendali penuh yayasan dengan laporan dan rencana biaya akurat.
+          </p>
+        </div>
+
+        <!-- Card 2: Dapur Mitra -->
+        <div class="platform-card fade-in stagger-2">
+          <img class="platform-icon mask-group9" src="mask-group8.svg" alt="Dapur Mitra" />
+          <h3 class="platform-card-title">Dapur Mitra</h3>
+          <p class="platform-card-text">
+            Atur menu, bahan baku, belanja, hingga distribusi lewat laporan otomatis.
+          </p>
+        </div>
+
+        <!-- Card 3: Pihak Sekolah -->
+        <div class="platform-card fade-in stagger-3">
+          <img class="platform-icon mask-group8" src="mask-group7.svg" alt="Pihak Sekolah" />
+          <h3 class="platform-card-title">Pihak Sekolah</h3>
+          <p class="platform-card-text">
+            Pantau menu harian, pastikan distribusi tepat sasaran, dan evaluasi kualitas
+            makanan.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 6: PENILAIAN / ASSESSMENT
+         ============================================ -->
+    <section class="assessment-section" id="penilaian">
+      <div class="assessment-header">
+        <!-- Badge -->
+        <div class="assessment-badge fade-in">
+          <span class="badge-dot"></span>
+          <span class="transformasi-digital">Transformasi Digital</span>
+        </div>
+
+        <!-- Title -->
+        <h2 class="assessment-title fade-in stagger-1">
+          Penilaian Berbasis Standar Keamanan Pangan
+        </h2>
+      </div>
+
+      <!-- Assessment Content -->
+      <div class="assessment-content">
+        <!-- Score Card -->
+        <div class="score-card fade-in scale-in">
+          <div class="score-circle">
+            <span class="score-value">100</span>
+            <span class="score-label">Sangat Baik</span>
+          </div>
+          <p class="score-subtitle">Keamanan pangan minggu ini</p>
+
+          <!-- Score Badges -->
+          <div class="score-badges">
+            <span class="score-badge pass">PASS</span>
+            <span class="score-badge partial">PARTIAL</span>
+            <span class="score-badge fail">FAIL</span>
+          </div>
+        </div>
+
+        <!-- Assessment Details -->
+        <div class="assessment-details fade-in slide-right">
+          <p class="assessment-description">
+            Hasil akhir berupa "Skor HACCP" untuk setiap fasilitas dapur atau
+            wilayah, diukur berdasarkan sistem jaminan keamanan pangan yang bertujuan
+            untuk mengidentifikasi, mengevaluasi, dan mengendalikan bahaya secara
+            sistematis.
+          </p>
+
+          <ul class="assessment-list">
+            <li class="assessment-item">Kualitas gizi makanan harian</li>
+            <li class="assessment-item">Ketepatan waktu operasional distribusi</li>
+            <li class="assessment-item">Kesesuaian menu dengan SOP dapur</li>
+            <li class="assessment-item">Tingkat keterjangkauan titik wilayah</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 7: FOOTER
+         ============================================ -->
+    <footer class="footer" id="hubungi">
+      <div class="footer-content">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <img class="untitled-1-12" src="untitled-1-11.png" alt="Bantu MBG Logo" />
+          <span class="bantu-mbg2">Bantu MBG</span>
+        </div>
+
+        <!-- Description -->
+        <p class="footer-description">
+          Sistem Monitoring Program Makan Bergizi Gratis terpadu untuk memastikan
+          pelaksanaan nasional yang efektif dan transparan.
+        </p>
+      </div>
+    </footer>
+
+  </div> <!-- /.frame-4 -->
+
+  <!-- ============================================
+       SCRIPTS
+       ============================================ -->
+  <script>
+   
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+
+  <script src="./script.js"></script>
+
 </body>
 </html>
