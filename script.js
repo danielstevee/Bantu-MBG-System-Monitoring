@@ -1,14 +1,3 @@
-/**
- * ============================================
- * BANTU MBG - Main JavaScript
- * ============================================
- * Mengatur animasi scroll (fade-in/slide/scale) untuk
- * Section 3-7. Efek navbar (scroll glass + mobile menu)
- * sudah ditangani langsung di index.html, jadi di sini
- * kode terkait id "header"/".nav-link" dijaga dengan
- * pengecekan null supaya tidak error di console.
- */
-
 (function() {
   'use strict';
 
@@ -19,9 +8,6 @@
 
   const fadeElements = document.querySelectorAll('.fade-in, .slide-left, .slide-right, .scale-in');
 
-  // ============================================
-  // INTERSECTION OBSERVER FOR ANIMATIONS
-  // ============================================
   function initScrollAnimations() {
     const observerOptions = {
       root: null,
@@ -40,9 +26,6 @@
     fadeElements.forEach(el => observer.observe(el));
   }
 
-  // ============================================
-  // CARD HOVER EFFECTS
-  // ============================================
   function initCardHoverEffects() {
     const cards = document.querySelectorAll('.challenge-card, .platform-card');
     cards.forEach(card => {
@@ -52,9 +35,6 @@
     });
   }
 
-  // ============================================
-  // LOADING ANIMATION
-  // ============================================
   function initLoadingAnimation() {
     document.body.style.opacity = '0';
     document.body.style.transition = 'opacity 0.5s ease';
@@ -66,9 +46,6 @@
     });
   }
 
-  // ============================================
-  // KEYBOARD NAVIGATION (Home key -> scroll to top)
-  // ============================================
   function initKeyboardNav() {
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Home') {
@@ -78,9 +55,7 @@
     });
   }
 
-  // ============================================
-  // INITIALIZATION
-  // ============================================
+
   function init() {
     initScrollAnimations();
     initCardHoverEffects();
