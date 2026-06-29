@@ -71,13 +71,7 @@ img {
   overflow-x: hidden;
 }
 
-/* ============================================
-   SECTION 1 & 2 (Navbar & Hero) sengaja TIDAK
-   didefinisikan di sini karena pakai Tailwind
-   langsung di HTML. Kelas2 di bawah ini cuma
-   dipakai sebagai cadangan kalau suatu saat mau
-   pindah ke versi non-Tailwind.
-   ============================================ */
+
 .section-badge,
 .solusi-badge,
 .assessment-badge {
@@ -365,11 +359,11 @@ img {
 .platform-header {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 60px; /* lebih lega */
   align-items: center;
   max-width: var(--container-max);
   margin: 0 auto 56px;
-  padding: 0 20px;
+  padding: 0 75px; /* sebelumnya 20px */
 }
 
 .platform-title {
@@ -400,11 +394,19 @@ img {
 .platform-card {
   background: #fafbfc;
   border-radius: 20px;
-  padding: 28px 24px;
+ padding: 28px 24px; /* sebelumnya 28px 24px */
   box-shadow: var(--shadow-card);
   transition: var(--transition-default);
   position: relative;
   overflow: hidden;
+}
+.platform-card-title {
+  margin-left: 4px;
+}
+
+.platform-card-text {
+  margin-left: 4px;
+  padding-right: 10px;
 }
 
 .platform-card::before {
