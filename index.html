@@ -174,10 +174,7 @@
 
             </div>
         </section>
-
-        <!-- ============================================
-         SECTION 3: PROBLEMATIKA / CHALLENGES
-         ============================================ -->
+        
         <section class="problematika-section" id="tantangan">
             <div style="text-align: center;">
                 <!-- Badge -->
@@ -262,85 +259,127 @@
             </div>
         </section>
 
-        <!-- ============================================
-         SECTION 4: SOLUSI / SOLUTIONS & FEATURES
-         ============================================ -->
-        <section class="solusi-section" id="solusi">
-            <div class="solusi-bg"></div>
+<section class="solusi-section relative overflow-hidden" id="solusi">
 
-            <div style="text-align: center;">
-                <!-- Badge -->
-                <div class="solusi-badge fade-in">
-                    <span class="badge-dot"></span>
-                    <span class="solusi-terpadu">Solusi Terpadu</span>
-                </div>
+    <!-- Background -->
+    <div 
+        class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        style="background-image: url('./background/bgsolusi.png');"
+    ></div>
 
-                <!-- Title -->
-                <h2 class="solusi-title fade-in stagger-1">Apa itu Bantu MBG?</h2>
+    <!-- Overlay biar teks kebaca -->
+    <div class="absolute inset-0 bg-white/20 z-10"></div>
 
-                <!-- Description -->
-                <p class="solusi-description fade-in stagger-2">
-                    Platform digital monitoring terpadu yang dirancang khusus untuk mengelola,
-                    menilai, dan mengevaluasi pelaksanaan Program Makan Bergizi Gratis secara
-                    nasional.
-                </p>
+    <!-- Content -->
+    <div class="relative z-20 max-w-6xl mx-auto px-6 lg:px-12">
+
+        <!-- Header -->
+        <div class="text-center mb-24">
+
+            <!-- Badge -->
+            <div class="solusi-badge fade-in mx-auto mb-6">
+                <span class="badge-dot"></span>
+                <span class="solusi-terpadu">Solusi Terpadu</span>
             </div>
 
-            <!-- Features Grid -->
-            <div class="features-grid" id="fitur">
-                <!-- Feature 1: Monitoring Proses -->
-                <div class="feature-row fade-in">
-                    <div class="feature-content slide-left">
-                        <h3 class="feature-title">Monitoring Proses</h3>
-                        <p class="feature-text">
-                            sistem pengawasan real-time yang memastikan setiap tahapan operasional
-                            berjalan sesuai standar prosedur (SOP).
-                        </p>
-                    </div>
-                    <img class="feature-image image-15" src="image-150.png" alt="Monitoring Proses" />
-                </div>
+            <!-- Title -->
+            <h2 class="solusi-title fade-in stagger-1 mb-5">
+                Apa itu Bantu MBG?
+            </h2>
 
-                <!-- Feature 2: Perencanaan Menu & Siklus Menu -->
-                <div class="feature-row reverse fade-in">
-                    <div class="feature-content slide-right">
-                        <h3 class="feature-title">Perencanaan Menu & Siklus Menu</h3>
-                        <p class="feature-text">
-                            Menyusun variasi menu harian dengan mudah. Jadwal otomatis disesuaikan
-                            dengan kebutuhan kandungan nutrisi standar yang diperlukan oleh anak.
-                        </p>
-                    </div>
-                    <img class="feature-image image-16" src="image-160.png" alt="Perencanaan Menu" />
-                </div>
+            <!-- Description -->
+            <p class="solusi-description fade-in stagger-2 max-w-2xl mx-auto">
+                Platform digital monitoring terpadu yang dirancang khusus untuk
+                mengelola, menilai, dan mengevaluasi pelaksanaan Program Makan
+                Bergizi Gratis secara nasional.
+            </p>
+        </div>
 
-                <!-- Feature 3: Perencanaan Belanja Bahan Baku -->
-                <div class="feature-row fade-in">
-                    <div class="feature-content slide-left">
-                        <h3 class="feature-title">Perencanaan Belanja Bahan Baku</h3>
-                        <p class="feature-text">
-                            Tanpa perhitungan yang tepat, dapur berisiko mengalami kelebihan atau
-                            kekurangan bahan baku. Hal ini dapat membuat biaya tidak efisien. Sistem
-                            kami menghitung gramasi secara otomatis.
-                        </p>
-                    </div>
-                    <img class="feature-image image-17" src="image-170.png" alt="Perencanaan Belanja" />
-                </div>
+        <!-- Features -->
+        <div class="flex flex-col gap-28" id="fitur">
 
-                <!-- Feature 4: Laporan Digital & Monitoring Proses -->
-                <div class="feature-row reverse fade-in">
-                    <div class="feature-content slide-right">
-                        <h3 class="feature-title">Laporan Digital & Monitoring Proses</h3>
-                        <p class="feature-text">
-                            Laporan operasional otomatis mempermudah proses verifikasi, efisien waktu,
-                            dan data lebih akurat.
-                            <br /><br />
-                            Proses dari persiapan hingga selesai dapat dipantau secara realtime dan
-                            dipastikan sesuai tujuan.
-                        </p>
-                    </div>
-                    <img class="feature-image image-18" src="image-180.png" alt="Laporan Digital" />
+            <!-- Feature 1 -->
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <img 
+                    class="feature-image w-full max-w-[430px] mx-auto"
+                    src="image-150.png" 
+                    alt="Monitoring Proses"
+                />
+
+                <div class="feature-content max-w-md">
+                    <h3 class="feature-title mb-4">Monitoring Proses</h3>
+                    <p class="feature-text">
+                        Sistem pengawasan real-time untuk memastikan setiap
+                        tahapan operasional berjalan sesuai standar prosedur (SOP).
+                    </p>
                 </div>
             </div>
-        </section>
+
+            <!-- Feature 2 -->
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="feature-content max-w-md order-2 lg:order-1">
+                    <h3 class="feature-title mb-4">
+                        Perencanaan Menu & Siklus Menu
+                    </h3>
+                    <p class="feature-text">
+                        Menyusun variasi menu harian dengan lebih mudah.
+                        Jadwal otomatis menyesuaikan kebutuhan kandungan nutrisi
+                        sesuai standar untuk anak.
+                    </p>
+                </div>
+
+                <img 
+                    class="feature-image w-full max-w-[430px] mx-auto order-1 lg:order-2"
+                    src="image-160.png" 
+                    alt="Perencanaan Menu"
+                />
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <img 
+                    class="feature-image w-full max-w-[430px] mx-auto"
+                    src="image-170.png" 
+                    alt="Perencanaan Belanja"
+                />
+
+                <div class="feature-content max-w-md">
+                    <h3 class="feature-title mb-4">
+                        Perencanaan Belanja Bahan Baku
+                    </h3>
+                    <p class="feature-text">
+                        Menghindari kelebihan maupun kekurangan bahan baku
+                        dengan sistem perhitungan gramasi otomatis agar biaya
+                        lebih efisien dan terkontrol.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="feature-content max-w-md order-2 lg:order-1">
+                    <h3 class="feature-title mb-4">
+                        Laporan Digital & Monitoring Proses
+                    </h3>
+                    <p class="feature-text">
+                        Laporan operasional otomatis mempermudah verifikasi,
+                        menghemat waktu, dan meningkatkan akurasi data.
+                        <br><br>
+                        Seluruh proses dapat dipantau secara real-time untuk
+                        memastikan pelaksanaan tetap sesuai tujuan.
+                    </p>
+                </div>
+
+                <img 
+                    class="feature-image w-full max-w-[430px] mx-auto order-1 lg:order-2"
+                    src="image-180.png" 
+                    alt="Laporan Digital"
+                />
+            </div>
+
+        </div>
+    </div>
+</section>
 
         <!-- ============================================
          SECTION 5: PLATFORM / ECOSYSTEM
