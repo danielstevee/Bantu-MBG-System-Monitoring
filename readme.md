@@ -29,6 +29,8 @@
 ---
 
 ## 📁 Struktur File
+
+```text
 bantu-mbg-landing/
 ├── .vscode/              # VS Code settings (opsional)
 │
@@ -48,7 +50,7 @@ bantu-mbg-landing/
 ├── style.css             # Custom CSS
 ├── script.js             # JavaScript interaktif
 └── README.md             # Dokumentasi
-
+```
 ---
 
 ## 🎨 Design System
